@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/fragmentGrades">
+
+    <fragment
+        android:id="@+id/fragmentGrades"
+        android:name="com.example.lista8.fragment.FragmentGrades"
+        android:label="Grades"
+        tools:layout="@layout/fragment_grades" >
+        <action
+            android:id="@+id/action_fragmentGrades_to_fragmentEdit"
+            app:destination="@id/fragmentEdit" />
+        <action
+            android:id="@+id/action_fragmentGrades_to_fragmentAdd"
+            app:destination="@id/fragmentAdd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAdd"
+        android:name="com.example.lista8.fragment.FragmentAdd"
+        android:label="Add Grade"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_fragmentAdd_to_fragmentGrades"
+            app:destination="@id/fragmentGrades" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentEdit"
+        android:name="com.example.lista8.fragment.FragmentEdit"
+        android:label="Edit Grade"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_fragmentEdit_to_fragmentGrades"
+            app:destination="@id/fragmentGrades" />
+    </fragment>
+</navigation>
